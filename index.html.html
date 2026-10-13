@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio de Tabelas HTML</title>
+<style>
+  :root { --purple:#6546df; --light:#f4f1ff; --ink:#25213a; --muted:#6c687c; --line:#e5e1f0; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font-family:Arial,Helvetica,sans-serif; background:#f8f7fc; color:var(--ink); line-height:1.6; }
+  header { background:#fff; border-bottom:1px solid var(--line); padding:22px max(5%,calc((100% - 1100px)/2)); display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .brand { margin:0; font-size:1.35rem; color:var(--purple); }
+  nav { display:flex; flex-wrap:wrap; gap:14px; }
+  nav a { color:var(--ink); text-decoration:none; font-size:.92rem; font-weight:bold; }
+  nav a:hover { color:var(--purple); }
+  .hero { padding:65px 5%; background:linear-gradient(135deg,#eee9ff,#fff); }
+  .hero-inner, main { width:min(1100px,100%); margin:auto; }
+  .eyebrow { color:var(--purple); font-size:.8rem; font-weight:bold; letter-spacing:1.3px; text-transform:uppercase; }
+  h1 { font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.1; margin:12px 0; letter-spacing:-1.5px; }
+  .hero p { max-width:700px; color:var(--muted); }
+  main { padding:30px 22px 60px; }
+  .intro { color:var(--muted); }
+  .activity { background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px; margin:24px 0; box-shadow:0 8px 24px #33215d08; }
+  .activity h2 { margin:0 0 5px; font-size:1.35rem; }
+  .material { display:inline-block; background:var(--light); color:var(--purple); border-radius:8px; padding:4px 9px; font-size:.8rem; font-weight:bold; margin-bottom:10px; }
+  .activity p { color:var(--muted); margin-top:5px; }
+  .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; margin-top:15px; }
+  table { border-collapse:collapse; width:100%; min-width:440px; background:white; }
+  caption { text-align:left; padding:12px 14px; font-weight:bold; color:var(--purple); background:#faf9ff; }
+  th, td { border:1px solid var(--line); padding:11px 14px; text-align:left; }
+  thead th { background:#eee9ff; color:#35256f; }
+  tbody tr:nth-child(even) { background:#faf9ff; }
+  tfoot th, tfoot td { background:#f0edff; font-weight:bold; }
+  .note { font-size:.9rem; color:var(--muted); }
+  footer { text-align:center; background:#28213f; color:#fff; padding:25px; }
+  @media(max-width:600px) { header { padding:18px 5%; } .activity { padding:17px; } main { padding:22px 14px 40px; } }
+</style>
+</head>
+<body>
+<header>
+  <h2 class="brand">Meu Portfólio HTML</h2>
+  <nav aria-label="Navegação principal">
+    <a href="#inicio">Início</a>
+    <a href="#material16">Material 3-16</a>
+    <a href="#material21">Material 3-21</a>
+    <a href="#material29">Material 3-29</a>
+    <a href="#material38">Material 3-38</a>
+    <a href="#material42">Material 3-42</a>
+    <a href="#material49">Material 3-49</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <span class="eyebrow">Atividades de desenvolvimento web</span>
+    <h1>Praticando tabelas com <span style="color:#6546df">HTML</span></h1>
+    <p>Este portfólio reúne as atividades dos Materiais 3-16, 3-21, 3-29, 3-38, 3-42 e 3-49 em uma única página. Use o menu para navegar entre elas.</p>
+  </div>
+</section>
+
+<main>
+  <p class="intro">As tabelas abaixo foram criadas com elementos HTML como <code>table</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>rowspan</code> e <code>colspan</code>.</p>
+
+  <section class="activity" id="material16">
+    <span class="material">Material 3 - 16</span>
+    <h2>1. Tabela de produtos</h2>
+    <p>Tabela com três colunas e sete linhas de produtos.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Lista de produtos</caption>
+        <thead><tr><th>Produto</th><th>Preço (R$)</th><th>Quantidade</th></tr></thead>
+        <tbody>
+          <tr><td>Arroz</td><td>25,90</td><td>12</td></tr>
+          <tr><td>Feijão</td><td>8,50</td><td>20</td></tr>
+          <tr><td>Macarrão</td><td>5,20</td><td>15</td></tr>
+          <tr><td>Óleo</td><td>7,99</td><td>10</td></tr>
+          <tr><td>Açúcar</td><td>4,75</td><td>18</td></tr>
+          <tr><td>Farinha</td><td>6,30</td><td>9</td></tr>
+          <tr><td>Café</td><td>16,90</td><td>8</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="activity" id="material21">
+    <span class="material">Material 3 - 21</span>
+    <h2>2. Tabela de pessoas</h2>
+    <p>Como os nomes do grupo não foram informados, esta tabela de exemplo tem três colunas e dez linhas para preencher/adaptar.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Integrantes do grupo</caption>
+        <thead><tr><th>Nome</th><th>Idade</th><th>Bairro</th></tr></thead>
+        <tbody>
+          <tr><td>Integrante 1</td><td>19</td><td>Centro</td></tr>
+          <tr><td>Integrante 2</td><td>20</td><td>Vila Nova</td></tr>
+          <tr><td>Integrante 3</td><td>18</td><td>Jardim das Flores</td></tr>
+          <tr><td>Integrante 4</td><td>21</td><td>Centro</td></tr>
+          <tr><td>Integrante 5</td><td>19</td><td>Vila Mariana</td></tr>
+          <tr><td>Integrante 6</td><td>22</td><td>Jardim América</td></tr>
+          <tr><td>Integrante 7</td><td>20</td><td>Vila Nova</td></tr>
+          <tr><td>Integrante 8</td><td>18</td><td>Centro</td></tr>
+          <tr><td>Integrante 9</td><td>23</td><td>Jardim das Flores</td></tr>
+          <tr><td>Integrante 10</td><td>19</td><td>Vila Mariana</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Substitua os exemplos pelos nomes, idades e bairros reais do seu grupo antes de entregar.</p>
+  </section>
+
+  <section class="activity" id="material29">
+    <span class="material">Material 3 - 29</span>
+    <h2>3. Países que quero visitar</h2>
+    <p>Tabela com três países, suas moedas locais e idiomas principais.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Destinos de viagem</caption>
+        <thead><tr><th>País</th><th>Moeda local</th><th>Idioma principal</th></tr></thead>
+        <tbody>
+          <tr><td>Japão</td><td>iene japonês (JPY)</td><td>Japonês</td></tr>
+          <tr><td>França</td><td>euro (EUR)</td><td>Francês</td></tr>
+          <tr><td>Canadá</td><td>dólar canadense (CAD)</td><td>Inglês e francês</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="activity" id="material38">
+    <span class="material">Material 3 - 38</span>
+    <h2>4. Tabela usando rowspan</h2>
+    <p>O nome “João” ocupa duas linhas usando o atributo <code>rowspan="2"</code>. Maria aparece em uma linha normal.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Exemplo de rowspan</caption>
+        <thead><tr><th>Nome</th><th>Dados</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2">João</td><td>Estudante</td></tr>
+          <tr><td>19 anos</td></tr>
+          <tr><td>Maria</td><td>Estudante, 20 anos</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="activity" id="material42">
+    <span class="material">Material 3 - 42</span>
+    <h2>5. Tabela mensal de produtos</h2>
+    <p>Arroz ocupa uma linha de produto; a linha “Total” usa <code>colspan="4"</code> para ocupar as quatro colunas.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Resumo mensal</caption>
+        <thead><tr><th>Produto</th><th>Jan</th><th>Fev</th><th>Mar</th></tr></thead>
+        <tbody>
+          <tr><td>Arroz</td><td>120</td><td>135</td><td>150</td></tr>
+          <tr><th colspan="4">Total: 405 unidades no trimestre</th></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="activity" id="material49">
+    <span class="material">Material 3 - 49</span>
+    <h2>6. Tabela de vendas com thead, tbody e tfoot</h2>
+    <p>O cabeçalho usa <code>thead</code>, os três produtos ficam em <code>tbody</code> e o total é exibido em <code>tfoot</code>.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Vendas por produto</caption>
+        <thead><tr><th>Produto</th><th>Vendas</th><th>Meta</th></tr></thead>
+        <tbody>
+          <tr><td>Arroz</td><td>120</td><td>100</td></tr>
+          <tr><td>Feijão</td><td>90</td><td>100</td></tr>
+          <tr><td>Macarrão</td><td>110</td><td>105</td></tr>
+        </tbody>
+        <tfoot><tr><th>Total de vendas</th><td>320</td><td>305</td></tr></tfoot>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Meu Portfólio de HTML · Atividades de tabelas</p>
+</footer>
+</body>
+</html>
